@@ -63,7 +63,7 @@ namespace VacationDecision
                         travel = "Charter Flight";
                         break;
                     }
-                    if (people == 0)
+                    if(people == 0)
                     {
                         Console.WriteLine("Please enter a valid number.\n");
                         
