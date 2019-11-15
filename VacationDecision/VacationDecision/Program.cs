@@ -9,27 +9,27 @@ namespace VacationDecision
             Console.WriteLine("Welcome to the first step of your stress-free vacation.\n");
             string answer = "no";
             string vacay = "";
-            string theme = "";
+            string vacationType = "";
             do
             {
                 
                 while (true)
                 {
-                    Console.WriteLine("Please choose a vacation theme:\n Tropic \n Musical \n Adventurous\n");
-                    theme = Console.ReadLine().ToLower();
+                    Console.WriteLine("Please choose a vacation vacationType:\n Tropic \n Musical \n Adventurous\n");
+                    vacationType = Console.ReadLine().ToLower();
                     
 
-                    if (theme.Equals("musical", StringComparison.OrdinalIgnoreCase))
+                    if (vacationType.Equals("musical", StringComparison.OrdinalIgnoreCase))
                     {
                         vacay = "New Orleans";
                         break;
                     }
-                    if (theme.Equals("tropical", StringComparison.OrdinalIgnoreCase))
+                    if (vacationType.Equals("tropical", StringComparison.OrdinalIgnoreCase))
                     {
                         vacay = "Beach Vacation in Mexico";
                         break;
                     }
-                    if (theme.Equals("adventurous", StringComparison.OrdinalIgnoreCase))
+                    if (vacationType.Equals("adventurous", StringComparison.OrdinalIgnoreCase))
                     {
                         vacay = "Whitewater Rafting the Grand Canyon";
                         break;
@@ -42,28 +42,28 @@ namespace VacationDecision
                 }
                 
                 string travel = "";
-                int people;
+                int groupSize;
                 while (true)
                 {
                     Console.WriteLine("How many will travel with you?");
-                    people = int.Parse(Console.ReadLine());
+                    groupSize = int.Parse(Console.ReadLine());
 
-                    if (people < 3)
+                    if (groupSize < 3)
                     {
                         travel = "First Class";
                         break;
                     }
-                    if (people < 5)
+                    if (groupSize < 5)
                     {
                         travel = "Helicopter";
                         break;
                     }
-                    if (people > 6)
+                    if (groupSize > 6)
                     {
                         travel = "Charter Flight";
                         break;
                     }
-                    if(people == 0)
+                    if(groupSize == 0)
                     {
                         Console.WriteLine("Please enter a valid number.\n");
                         
@@ -74,7 +74,7 @@ namespace VacationDecision
                 
 
 
-                string result = "Since you're a group of " + people + " going on a " + theme + " vacation, you should take a " + travel + " to a " + vacay;
+                string result = "Since you're a group of " + groupSize + " going on a " + vacationType + " vacation, you should take a " + travel + " to a " + vacay;
 
                 Console.WriteLine(result);
                 Console.WriteLine("\nWould you like to plan another vacation?");
