@@ -15,7 +15,7 @@ namespace VacationDecision
                 
                 while (true)
                 {
-                    Console.WriteLine("Please choose a vacation vacationType:\n Tropic \n Musical \n Adventurous\n");
+                    Console.WriteLine("Please choose a vacation vacationType:\n Tropical \n Musical \n Adventurous\n");
                     vacationType = Console.ReadLine().ToLower();
                     
 
