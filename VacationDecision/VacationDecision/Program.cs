@@ -58,7 +58,7 @@ namespace VacationDecision
                         travel = "Helicopter";
                         break;
                     }
-                    if (groupSize > 6)
+                    if (groupSize >= 6)
                     {
                         travel = "Charter Flight";
                         break;
